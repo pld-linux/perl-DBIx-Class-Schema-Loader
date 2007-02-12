@@ -6,7 +6,7 @@
 %define	pdir	DBIx
 %define	pnam	Class-Schema-Loader
 Summary:	DBIx::Class::Schema::Loader - Dynamic definition of a DBIx::Class::Schema
-Summary(pl):	DBIx::Class::Schema::Loader - dynamiczne definiowanie DBIx::Class::Schema
+Summary(pl.UTF-8):   DBIx::Class::Schema::Loader - dynamiczne definiowanie DBIx::Class::Schema
 Name:		perl-DBIx-Class-Schema-Loader
 Version:	0.03007
 Release:	1
@@ -43,17 +43,17 @@ degree with this loader, depending on how much of the DBI spec they
 implement, and how standard their implementation is.  Patches to make
 other DBDs work correctly welcome.
 
-%description -l pl
+%description -l pl.UTF-8
 DBIx::Class::Schema::Loader automatyzuje definiowanie
 DBIx::Class::Schema poprzez przeszukiwanie definicji tabel bazy danych
-i ustawianie kolumn, kluczy g³ównych i relacji.
+i ustawianie kolumn, kluczy gÅ‚Ã³wnych i relacji.
 
-DBIx::Class::Schema::Loader aktualnie obs³uguje tylko typ sk³adowania
-DBI. Ma bezpo¶redni± obs³ugê DBD::Pg, DBD::mysql, DBD::DB2 i
-DBD::SQLite. Inne sterowniki DBI mog± dzia³aæ w mniejszym lub wiêkszym
-stopniu, w zale¿no¶ci od tego, jak± czê¶æ specyfikacji DBI maj±
-zaimplementowan± i na ile standardowa jest ta implementacja. £aty
-poprawiaj±ce dzia³anie z innymi DBD s± mile widziane.
+DBIx::Class::Schema::Loader aktualnie obsÅ‚uguje tylko typ skÅ‚adowania
+DBI. Ma bezpoÅ›redniÄ… obsÅ‚ugÄ™ DBD::Pg, DBD::mysql, DBD::DB2 i
+DBD::SQLite. Inne sterowniki DBI mogÄ… dziaÅ‚aÄ‡ w mniejszym lub wiÄ™kszym
+stopniu, w zaleÅ¼noÅ›ci od tego, jakÄ… czÄ™Å›Ä‡ specyfikacji DBI majÄ…
+zaimplementowanÄ… i na ile standardowa jest ta implementacja. Åaty
+poprawiajÄ…ce dziaÅ‚anie z innymi DBD sÄ… mile widziane.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

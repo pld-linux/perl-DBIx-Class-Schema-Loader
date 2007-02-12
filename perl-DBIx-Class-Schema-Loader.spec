@@ -6,7 +6,7 @@
 %define	pdir	DBIx
 %define	pnam	Class-Schema-Loader
 Summary:	DBIx::Class::Schema::Loader - Dynamic definition of a DBIx::Class::Schema
-Summary(pl.UTF-8):   DBIx::Class::Schema::Loader - dynamiczne definiowanie DBIx::Class::Schema
+Summary(pl.UTF-8):	DBIx::Class::Schema::Loader - dynamiczne definiowanie DBIx::Class::Schema
 Name:		perl-DBIx-Class-Schema-Loader
 Version:	0.03007
 Release:	1

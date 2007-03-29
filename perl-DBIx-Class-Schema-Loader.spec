@@ -8,13 +8,13 @@
 Summary:	DBIx::Class::Schema::Loader - Dynamic definition of a DBIx::Class::Schema
 Summary(pl.UTF-8):	DBIx::Class::Schema::Loader - dynamiczne definiowanie DBIx::Class::Schema
 Name:		perl-DBIx-Class-Schema-Loader
-Version:	0.03007
+Version:	0.03010
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/B/BL/BLBLACK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	1ade07990e2f9f364e586ac351108cfd
+# Source0-md5:	3ee92339d10626328b42838452bde9fa
 URL:		http://search.cpan.org/dist/DBIx-Class-Schema-Loader/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13

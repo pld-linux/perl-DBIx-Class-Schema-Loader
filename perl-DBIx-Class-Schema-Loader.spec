@@ -8,26 +8,25 @@
 Summary:	DBIx::Class::Schema::Loader - Dynamic definition of a DBIx::Class::Schema
 Summary(pl.UTF-8):	DBIx::Class::Schema::Loader - dynamiczne definiowanie DBIx::Class::Schema
 Name:		perl-DBIx-Class-Schema-Loader
-Version:	0.03010
+Version:	0.04003
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/B/BL/BLBLACK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3ee92339d10626328b42838452bde9fa
+# Source0-md5:	9592b69f184fd41d2eac870c94f456dd
 URL:		http://search.cpan.org/dist/DBIx-Class-Schema-Loader/
-BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Class-Accessor >= 0.22
-BuildRequires:	perl-Class-Data-Accessor >= 0.02
+BuildRequires:	perl-Class-Accessor >= 0.31
+BuildRequires:	perl-Class-Data-Accessor >= 0.03
 BuildRequires:	perl-DBD-SQLite >= 1.12
 BuildRequires:	perl-DBIx-Class >= 0.06003
 BuildRequires:	perl-Data-Dump >= 1.06
 BuildRequires:	perl-Lingua-EN-Inflect >= 1.89
 BuildRequires:	perl-Lingua-EN-Inflect-Number >= 1.1
-BuildRequires:	perl-UNIVERSAL-require >= 0.1
+BuildRequires:	perl-UNIVERSAL-require >= 0.11
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -60,17 +59,17 @@ poprawiające działanie z innymi DBD są mile widziane.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
+%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"DBIx::Class::Schema::Loader")' \
+	INSTALLDIRS=vendor
+%{__make}
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT

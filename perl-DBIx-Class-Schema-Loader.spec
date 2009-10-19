@@ -8,21 +8,26 @@
 Summary:	DBIx::Class::Schema::Loader - Dynamic definition of a DBIx::Class::Schema
 Summary(pl.UTF-8):	DBIx::Class::Schema::Loader - dynamiczne definiowanie DBIx::Class::Schema
 Name:		perl-DBIx-Class-Schema-Loader
-Version:	0.04003
+Version:	0.04006
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/B/BL/BLBLACK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	9592b69f184fd41d2eac870c94f456dd
+Source0:	http://search.cpan.org/CPAN/authors/id/I/IL/ILMARI/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	819e92fd8c7088fdde730d1295556d3c
 URL:		http://search.cpan.org/dist/DBIx-Class-Schema-Loader/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-Accessor >= 0.31
+BuildRequires:	perl-Carp-Clan
+BuildRequires:	perl-Class-Accessor >= 0.30
+BuildRequires:	perl-Class-C3 >= 0.18
 BuildRequires:	perl-Class-Data-Accessor >= 0.03
+BuildRequires:	perl-Class-Inspector
 BuildRequires:	perl-DBD-SQLite >= 1.12
-BuildRequires:	perl-DBIx-Class >= 0.06003
+BuildRequires:	perl-DBI >= 1.56
+BuildRequires:	perl-DBIx-Class >= 0.07006
 BuildRequires:	perl-Data-Dump >= 1.06
 BuildRequires:	perl-Lingua-EN-Inflect >= 1.89
 BuildRequires:	perl-Lingua-EN-Inflect-Number >= 1.1

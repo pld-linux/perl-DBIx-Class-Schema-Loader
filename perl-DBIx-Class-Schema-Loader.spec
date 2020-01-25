@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	DBIx
 %define	pnam	Class-Schema-Loader
 Summary:	DBIx::Class::Schema::Loader - Dynamic definition of a DBIx::Class::Schema
